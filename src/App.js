@@ -1,11 +1,32 @@
 import './App.css';
-import { Nav,About,Contact,Portfolio } from './components';
+import { Nav,About,Contact,Portfolio,Resume,Footer } from './components';
 
-const App = () =>
-    <div className="App">
+function App () {
+let component
+switch (window.location.pathname){
+    case "/":
+    component = <About />
+    break
+
+    case "/portfolio":
+    component = <Portfolio />
+    break
+
+    case "/contact":
+    component = <Contact />
+    break
+
+    case "/resume":
+    component = <Resume />
+    break
+
+
+}
+  return  <div className="App">
         <Nav />
-        <About />
-        <Contact />
+        {component}
+        <Footer />
     </div>
+}
 
 export default App;
