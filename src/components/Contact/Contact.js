@@ -43,7 +43,7 @@ function Contact(){
     }
 
     return (
-        <div>
+        <div className="contact">
             <h1>Contact Levi</h1>
             <form>
                 <input 
@@ -60,11 +60,11 @@ function Contact(){
                 type = "text"
                 placeholder='Email'
                 />
-                <input 
+                <textarea 
                 value ={message}
                 name = "message"
                 onChange={handleInputChange}
-                type = "text"
+                type = "textarea"
                 placeholder='Message'
                 />
                 <button type = "button" onClick={handleSubmit}>Submit</button>

@@ -7,12 +7,12 @@ const Footer = () =>
 <footer>
       <ul>
         <li>
-          <a href="https://github.com/wasmunlb">
+          <a target="_blank" href="https://github.com/wasmulb">
             < FaGithub size={30} style={{color: 'white'}}/>
           </a>
         </li>
         <li>
-          <a href="https://linkedin.com/in/levi-wasmundt">
+          <a target="_blank" href="https://www.linkedin.com/in/levi-wasmundt-19721522b">
             <FaLinkedin size={30} style={{color:'white'}} />
           </a>
         </li>
