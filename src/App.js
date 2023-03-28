@@ -1,30 +1,17 @@
 import './App.css';
 import { Nav,About,Contact,Portfolio,Resume,Footer } from './components';
+import {Route, Routes} from "react-router-dom"
 
 function App () {
-let component
-switch (window.location.pathname){
-    case "/":
-    component = <About />
-    break
 
-    case "/portfolio":
-    component = <Portfolio />
-    break
-
-    case "/contact":
-    component = <Contact />
-    break
-
-    case "/resume":
-    component = <Resume />
-    break
-
-
-}
   return  <div className="App">
         <Nav />
-        {component}
+        <Routes>
+            <Route path ="/" element = {<About />} />
+            <Route path ="/contact" element = {<Contact />} />
+            <Route path ="/portfolio" element = {<Portfolio />} />
+            <Route path ="/resume" element = {<Resume />} />
+        </Routes>
         <Footer />
     </div>
 }

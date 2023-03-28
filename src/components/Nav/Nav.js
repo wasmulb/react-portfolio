@@ -1,4 +1,6 @@
 import './nav.css';
+import { Link, useMatch, useResolvedPath } from "react-router-dom"
+
 
 function Nav () {
  const path = window.location.pathname
@@ -6,20 +8,21 @@ return (
 <nav>
     <h1>Levi Wasmundt</h1>
     <ul>
-       <CustomLink href="/">About me</CustomLink>    
-        <CustomLink href="/portfolio">Portfolio</CustomLink>       
-        <CustomLink href="/contact">Contact</CustomLink>        
-        <CustomLink href="/resume">Resume</CustomLink>        
+       <CustomLink to="/">About me</CustomLink>    
+        <CustomLink to="/portfolio">Portfolio</CustomLink>       
+        <CustomLink to="/contact">Contact</CustomLink>        
+        <CustomLink to="/resume">Resume</CustomLink>        
     </ul>
 </nav>
 )
 }
 
-function CustomLink({href, children, ...props}){
-    const path= window.location.pathname
+function CustomLink({to, children, ...props}){
+    const resolvedPath = useResolvedPath(to)
+    const isActive = useMatch({ path: resolvedPath.pathname, end: true})
     return (
-        <li className={path === href ? "active": ""}>
-            <a href={href}>{children}</a>
+        <li className={isActive ? "active": ""}>
+            <Link to={to}>{children}</Link>
         </li>
     )
 }
