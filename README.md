@@ -6,7 +6,7 @@ https://wasmulb.github.io/react-portfolio/
 
 ## Website Screenshot:
 
-![Screenshot one](./src/images/recgrabber-sc.png)
+![Screenshot one](./src/images/react-port-sc.png)
 
 ![Screenshot two](./src/images/react-port-sc2.png)
 
