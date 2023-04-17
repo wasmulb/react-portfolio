@@ -17,6 +17,12 @@ const Portfolio = () =>
         <a target="_blank" href="https://braggingrights.herokuapp.com/">Deployed Website</a>
         <a target="_blank" href="https://github.com/wasmulb/bragging-rights">GitHub Repo</a>
     </div>
+    <div className='project'>
+        <h2>Watch Worthy</h2>
+        <img src={braggingRights}></img>
+        <a target="_blank" href="https://watch-worthy.herokuapp.com/">Deployed Website</a>
+        <a target="_blank" href="https://github.com/wasmulb/WatchWorthy">GitHub Repo</a>
+    </div>
 </div>
 
 export default Portfolio;
