@@ -1,6 +1,7 @@
 import './portfolio.css'
 import recGrabberPic from '../../images/recgrabber-sc.png';
-import braggingRights from '../../images/bragging-right-sc.png'
+import braggingRights from '../../images/bragging-right-sc.png';
+import watchWorthy from '../../images/watch-worthy.png'
 
 const Portfolio = () =>
 <div className="portfolio">
@@ -19,7 +20,7 @@ const Portfolio = () =>
     </div>
     <div className='project'>
         <h2>Watch Worthy</h2>
-        <img src={braggingRights}></img>
+        <img src={watchWorthy}></img>
         <a target="_blank" href="https://watch-worthy.herokuapp.com/">Deployed Website</a>
         <a target="_blank" href="https://github.com/wasmulb/WatchWorthy">GitHub Repo</a>
     </div>
